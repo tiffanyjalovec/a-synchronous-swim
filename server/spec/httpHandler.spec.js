@@ -29,12 +29,13 @@ describe('server responses', () => {
     httpHandler.router(req,res);
 
     expect(res._ended).to.equal(true);
-    expect(res._data.toString()).to.be.empty;
+    // expect(res._data.toString()).to.be.empty;
+    expect(res._responseCode).to.equal(200);
 
-   res.write('left');
+    console.log(res._responseCode);
+    console.log(res._data.toString());
 
-
-    expect(['right', 'left', 'top', 'bottom']).to.include(res._data);
+    expect(['right', 'left', 'top', 'bottom']).to.contain(res._data.toString());
 
     done();
   });

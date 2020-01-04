@@ -17,7 +17,7 @@
     $.ajax({
       type: 'POST',
       data: formData,
-      url: 'FILL_ME_IN',
+      url: serverUrl,
       cache: false,
       contentType: false,
       processData: false,
@@ -27,6 +27,25 @@
       }
     });
   };
+
+  const ajaxSwimCommand = () => {
+    $.ajax({
+      url: serverUrl,
+      type: 'GET',
+      //data: res._data.toString(),
+      //data: { order: '-createdAt' },
+      contentType: json;
+      success:  function(res._data) {
+        swimTeam.move(res._data);
+      }
+      //this is where we run swimTeam.move(direction),
+
+      }
+    });
+  }
+
+
+
 
   $('form').on('submit', function(e) {
     e.preventDefault();
