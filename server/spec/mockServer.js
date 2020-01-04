@@ -41,8 +41,9 @@ var response = function() {
 
   this.write = (data) => {
     if (data) {
-      this._data = Buffer.concat([this._data, Buffer.from(data)]);
+       this._data = Buffer.concat([this._data, Buffer.from(data)]);
     }
+    console.log(this._data);
   };
 
   this.end = (data) => {

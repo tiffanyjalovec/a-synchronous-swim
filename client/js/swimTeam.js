@@ -10,6 +10,7 @@ const SwimTeam = {
       return;
     }
     console.log(`Lets go: ${direction}`);
+    console.log('umpa loompa');
 
     // set the swim-team's direction
     $('.swimmer')
@@ -65,7 +66,7 @@ const SwimTeam = {
         SwimTeam.coords.left += 5;
       }
       break;
-    } 
+    }
   }
 
 };
