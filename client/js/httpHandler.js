@@ -28,22 +28,23 @@
     });
   };
 
-  const ajaxSwimCommand = () => {
+  window.SwimCommand = () => {
     $.ajax({
       url: serverUrl,
       type: 'GET',
       //data: res._data.toString(),
       //data: { order: '-createdAt' },
-      contentType: json;
-      success:  function(res._data) {
-        swimTeam.move(res._data);
-      }
-      //this is where we run swimTeam.move(direction),
-
+      success:  function(command) {
+        //console.log(command);
+        SwimTeam.move(command);
+      },
+      complete: () => {
+        setTimeout(SwimCommand, 100);
       }
     });
   }
 
+  setTimeout(SwimCommand, 0);
 
 
 
